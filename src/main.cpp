@@ -26,35 +26,28 @@ void loop() {
 
 void caracterVoid() {
   if (Serial.available () !=0) {
-    bool inval_caract = 1;
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
       case '4':                                 //1 = - jug. a 2 = reset 3 = - jug. b
       Serial.println("+ 1 al jugador a");
-      inval_caract = 0;
       break;
       case '5':
       Serial.println("set");
-      inval_caract = 0;
       break;
       case '6':
       Serial.println("+ 1 al jugador b");
-      inval_caract = 0;
       break;
       case '1':
       Serial.println("-1 al jugador a");
-      inval_caract = 0;
       break;
       case '2':
       Serial.println("reset");
-      inval_caract = 0;
       break;
       case '3':
       Serial.println("-1 al jugador b");
-      inval_caract = 0;
       break;
-    }
-    if (inval_caract == 1){
+      default:
       Serial.println("caracter inválido -_-");
+      break;
     }
   }
 }
