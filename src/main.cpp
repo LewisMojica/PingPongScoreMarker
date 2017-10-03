@@ -3,8 +3,8 @@
 // #include <Timer.h>
 #include <Button.h>
 #define led 13
-Button bl(2);
-Button b(7);
+Button bl(2,10);
+Button b(7,10);
 
 
 bool push_botton_falling(byte pin);
@@ -21,11 +21,12 @@ void setup() {
 
 void loop() {
   if (bl.falling()==1){
-    digitalWrite(led, !digitalRead(led));
+    // digitalWrite(led, !digitalRead(led));
     Serial.println("bl pulsado");
   }
   if (b.falling()==1){
-    digitalWrite(led, !digitalRead(led));
+    // digitalWrite(led, !digitalRead(led));
     Serial.println("b pulsado :D");
   }
+  digitalWrite(led, !digitalRead(led));
 }

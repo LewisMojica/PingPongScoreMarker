@@ -1,8 +1,9 @@
 #include <Arduino.h>
 #include "Button.h"
 
-Button::Button(byte pin) {
+Button::Button(byte pin, byte anti_bounce) {
   _pin=pin;
+  _anti_bounce=anti_bounce;
 }
 
   bool Button::rissing() {
@@ -15,7 +16,7 @@ Button::Button(byte pin) {
     puls = 0;
     est_ant = digitalRead(_pin);
   }
-  delay(50);
+  delay(_anti_bounce);
   return puls;
 }
 
@@ -29,6 +30,6 @@ bool Button::falling() {
     puls = 0;
     est_ant = digitalRead(_pin);
   }
-  delay(50);
+  delay(_anti_bounce);
   return puls;
 }
