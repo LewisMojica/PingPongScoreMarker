@@ -10,7 +10,6 @@ Timer bl(50);
 
 void caracterVoid();
 void blink();
-void blinkx2();
 
 void setup() {
   Serial.begin(9600);
@@ -62,18 +61,14 @@ void caracterVoid() {
 
 void blink(){
   if (l.check() == 1){
-    blinkx2();
-  }
-}
-
-void blinkx2(){
-  static byte time;
-  if (bl.read()==1){
-    digitalWrite(led, !digitalRead(led));
-    time++;
-  }
-  if (time >= tim_blink) {
-    l.reset();
-    time = 0;
+    static byte time;
+    if (bl.read()==1){
+      digitalWrite(led, !digitalRead(led));
+      time++;
+    }
+    if (time >= tim_blink) {
+      l.reset();
+      time = 0;
+    }
   }
 }
