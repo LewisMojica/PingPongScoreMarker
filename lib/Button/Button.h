@@ -12,5 +12,6 @@ public:
   Button(byte pin, byte anti_bounce);
   bool falling();
   bool rissing();
+  bool check();
 };
 #endif
