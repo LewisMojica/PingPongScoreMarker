@@ -1,5 +1,5 @@
-#ifndef Timer_h
-#define Timer_h
+#ifndef Button_h
+#define Button_h
 #include <Arduino.h>
 
 class Button
