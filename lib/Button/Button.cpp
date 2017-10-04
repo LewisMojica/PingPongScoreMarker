@@ -48,14 +48,12 @@ void Button::end(){
 }
 
 bool Button::visit(unsigned long _interval){
-  bool result;
   if(((millis() - _pre_millis) >= _interval) && _init==1){
-    result=1;
+    return 1;
   }
   else {
-    result=0;
+    return 0;
   }
-  return result;
 }
 /*fin de funciones de timer*/
 

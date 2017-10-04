@@ -1,14 +1,10 @@
 #include<Arduino.h>
-#include<Timer.h>
+#include<Button.h>
 /*OBJETOS DE LA CLASE*/
-Timer bot(2000);
-
+Button l(7,20);
 /*DEFINICIONES*/
 #define led 13
 
 /*DECLARACIONES DE FUNCIONES*/
-bool pushLong(byte pin);
-bool pushRef1(byte pin);
 
 /*DECLARACIONES DE VARIABLE*/
-bool push;
