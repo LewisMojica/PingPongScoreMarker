@@ -8,3 +8,7 @@ Timer bot(2000);
 
 /*DECLARACIONES DE FUNCIONES*/
 bool pushLong(byte pin);
+bool pushRef1(byte pin);
+
+/*DECLARACIONES DE VARIABLE*/
+bool push;

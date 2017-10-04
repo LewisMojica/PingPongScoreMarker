@@ -18,42 +18,31 @@ void loop() {
 
 
 bool pushLong(byte pin){
-  static bool push;
   if (push == 1){
-    if (!digitalRead(pin) == 1){
-      push = 1;
-      if (bot.check() == 1){
-        bot.end();
-        return 1;
-      }
-      else{
-        return 0;
-      }
-    }
-    else{
-      push = 0;
-      bot.end();
-      return 0;
-    }
+    return pushRef1(pin);
   }
   else{
     if (!digitalRead(pin) == 1){
       bot.init();
-      if (!digitalRead(pin) == 1){
-        push = 1;
-        if (bot.check() == 1){
-          bot.end();
-          return 1;
-        }
-        else{
-          return 0;
-        }
-      }
-      else{
-        push = 0;
-        bot.end();
-        return 0;
-      }
+      return pushRef1(pin);
     }
+  }
+}
+
+bool pushRef1(byte pin){
+  if (!digitalRead(pin) == 1){
+    push = 1;
+    if (bot.check() == 1){
+      bot.end();
+      return 1;
+    }
+    else{
+      return 0;
+    }
+  }
+  else{
+    push = 0;
+    bot.end();
+    return 0;
   }
 }
