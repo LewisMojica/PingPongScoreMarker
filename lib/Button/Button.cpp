@@ -60,22 +60,22 @@ bool Button::visit(unsigned long _interval){
 /*fin de funciones de timer*/
 
 
-bool Button::Long(unsigned long _interval){                            //Esta funcion retorna 1 cuando el boton fue preconado por mas de un tiempo determinado por la variable timer, cuando retorna 1 el boton debe dejae de ser pulsado para poder retornar otro 1
+bool Button::large(unsigned long _interval){                            //Esta funcion retorna 1 cuando el boton fue preconado por mas de un tiempo determinado por la variable timer, cuando retorna 1 el boton debe dejae de ser pulsado para poder retornar otro 1
   if (_push == 1){
-    return pushRef1();
+    return pushRef1(_interval);
   }
   else{
     if (!digitalRead(_pin) == 1){
       init();
-      return pushRef1();
+      return pushRef1(_interval);
     }
   }
 }
 
-bool Button::pushRef1(){                                 //esta subfuncion la utiliza la funcion longPush varias veces
+bool Button::pushRef1(unsigned long _interval){                                 //esta subfuncion la utiliza la funcion longPush varias veces
   if (!digitalRead(_pin) == 1){
     _push = 1;
-    if (visit() == 1){
+    if (visit(_interval) == 1){
       end();
       return 1;
     }

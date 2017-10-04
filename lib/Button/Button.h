@@ -15,7 +15,7 @@ private:
   unsigned long _pre_millis;          //milllis de referencia
   /*fin de variable de las funciones de timer*/
 
-  bool pushRef1();                            //esta subfuncion la utiliza la funcion longPush varias veces
+  bool pushRef1(unsigned long _interval);                            //esta subfuncion la utiliza la funcion longPush varias veces
   void init();
   void end();
   bool visit(unsigned long _interval);
@@ -24,6 +24,6 @@ public:
   bool falling();
   bool rissing();
   bool check();
-  bool Long(unsigned long interval);
+  bool large(unsigned long interval);
 };
 #endif
