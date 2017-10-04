@@ -1,14 +1,4 @@
-#include <Arduino.h>
-
-// #include <Timer.h>
-#include <Button.h>
-#define led 13
-Button bl(2,10);
-Button b(7,10);
-
-
-bool push_botton_falling(byte pin);
-bool push_botton_rissing(byte pin);
+#include <depend.h>
 
 void setup() {
   Serial.begin(9600);
@@ -20,13 +10,50 @@ void setup() {
 
 
 void loop() {
-  if (bl.falling()==1){
-    // digitalWrite(led, !digitalRead(led));
-    Serial.println("bl pulsado");
+  if (pushLong(7) == 1){
+    digitalWrite(led, !digitalRead(led));
+    Serial.println("long!");
   }
-  if (b.falling()==1){
-    // digitalWrite(led, !digitalRead(led));
-    Serial.println("b pulsado :D");
+}
+
+
+bool pushLong(byte pin){
+  static bool push;
+  if (push == 1){
+    if (!digitalRead(pin) == 1){
+      push = 1;
+      if (bot.check() == 1){
+        bot.end();
+        return 1;
+      }
+      else{
+        return 0;
+      }
+    }
+    else{
+      push = 0;
+      bot.end();
+      return 0;
+    }
   }
-  digitalWrite(led, !digitalRead(led));
+  else{
+    if (!digitalRead(pin) == 1){
+      bot.init();
+      if (!digitalRead(pin) == 1){
+        push = 1;
+        if (bot.check() == 1){
+          bot.end();
+          return 1;
+        }
+        else{
+          return 0;
+        }
+      }
+      else{
+        push = 0;
+        bot.end();
+        return 0;
+      }
+    }
+  }
 }
