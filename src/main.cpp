@@ -1,7 +1,6 @@
 #include <depend.h>
 void setup() {
   Serial.begin(9600);
-  pinMode(led, OUTPUT);
 }
 
 
@@ -32,4 +31,26 @@ void loop() {
       break;
     }
   }
+}
+
+void jug_A_Win_Pint(){
+  jug_A_punt++;
+}
+
+void jug_B_Win_Pint(){
+  jug_B_punt++;
+}
+
+void resetAll(){
+
+}
+
+void resetPunt(){
+
+}
+void printData(){
+  Serial.print("punt. de jug. A = ");
+  Serial.println(jug_A_punt);
+  Serial.print("punt. de jug. B = ");
+  Serial.println(jug_B_punt);
 }
