@@ -1,16 +1,4 @@
-#include <Arduino.h>
-
-#include <Timer.h>
-Timer l(1250);
-Timer bl(50);
-
-#define led 13
-#define on 4
-#define tim_blink on*2 //numero par
-
-void caracterVoid();
-void blink();
-
+#include <depend.h>
 void setup() {
   Serial.begin(9600);
   pinMode(led, OUTPUT);
