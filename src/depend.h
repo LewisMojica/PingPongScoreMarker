@@ -7,12 +7,7 @@ Timer bl(50);
 
 
 /*Definiciones*/
-#define led 13
-#define on 4
-#define tim_blink on*2 //numero par
 
 /*Declaraciones de funciones*/
 
 //void
-void caracterVoid();
-void blink();
