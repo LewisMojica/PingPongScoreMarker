@@ -1,5 +1,5 @@
-#include<Arduino.h>
-#include<Button.h>
+#include <Arduino.h>
+#include <Button.h>
 /*OBJETOS DE LA CLASE*/
 Button l(7,20);
 /*DEFINICIONES*/
@@ -10,14 +10,12 @@ Button l(7,20);
 /*DECLARACIONES DE VARIABLE*/
 
 void setup(){
-  Serial.begin(9600);
   pinMode(led, OUTPUT);
   pinMode(7, INPUT_PULLUP);
 }
 
 void loop(){
-  if (l.large(1000) == 1){
+  if (l.read() == 1){
     digitalWrite(led, !digitalRead(led));
-    Serial.println("Dentro del if");
   }
 }
