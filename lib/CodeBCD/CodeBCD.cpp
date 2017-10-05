@@ -6,7 +6,7 @@ CodeBCD::CodeBCD(byte A, byte B, byte C, byte D){
   _pin[1] = B;
   _pin[2] = C;
   _pin[3] = D;
-  for (byte i = 0; i <=  2; i++){
+  for (byte i = 0; i <=  3; i++){
     pinMode(_pin[i],OUTPUT);
   }
 }
