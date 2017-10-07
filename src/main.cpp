@@ -10,7 +10,7 @@ void loop() {
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
       case '4':                                 //1 = - jug. a 2 = reset 3 = - jug. b
       Serial.println("+ 1 al jugador a");
-      jug_A_Win_Pint();
+      jug_A_Win_Point();
       printData();
       break;
 
@@ -21,13 +21,18 @@ void loop() {
 
       case '6':
       Serial.println("+ 1 al jugador b");
-      jug_B_Win_Pint();
+      jug_B_Win_Point();
       printData();
       break;
 
       case '1':
-      Serial.println("-1 al jugador a");
-      jug_A_punt--;
+      if (jug_A_punt != 0){
+        Serial.println("-1 al jugador a");
+        jug_A_punt--;
+      }
+      else{
+        Serial.println("El puntaje no puede ser menor que 0");
+      }
       printData();
       break;
 
@@ -37,8 +42,13 @@ void loop() {
       break;
 
       case '3':
-      Serial.println("-1 al jugador b");
-      jug_B_punt--;
+      if (jug_B_punt != 0){
+        Serial.println("-1 al jugador b");
+        jug_B_punt--;
+      }
+      else{
+        Serial.println("El puntaje no puede ser menor que 0");
+      }
       printData();
       break;
 
@@ -58,11 +68,11 @@ void loop() {
   }
 }
 
-void jug_A_Win_Pint(){
-  jug_A_punt++;
+void jug_A_Win_Point(){
+    jug_A_punt++;
 }
 
-void jug_B_Win_Pint(){
+void jug_B_Win_Point(){
   jug_B_punt++;
 }
 

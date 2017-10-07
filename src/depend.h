@@ -17,8 +17,8 @@ byte jug_B_punt; //almacena el puntaje del jugador B
 
 /*Declaraciones de funciones*/
 //void
-void jug_A_Win_Pint();
-void jug_B_Win_Pint();
+void jug_A_Win_Point();
+void jug_B_Win_Point();
 void resetAll();
 void resetPunt();
 void printData();
