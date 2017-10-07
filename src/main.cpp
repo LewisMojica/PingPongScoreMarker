@@ -9,8 +9,13 @@ void loop() {
   if (Serial.available () !=0) {
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
       case '4':                                 //1 = - jug. a 2 = reset 3 = - jug. b
-      Serial.println("+ 1 al jugador a");
-      jug_A_Win_Point();
+      if (jug_A_punt != 255){
+        Serial.println("+ 1 al jugador a");
+        jug_A_Win_Point();
+      }
+      else {
+        Serial.println("El puntaje no puede ser mayor que 255");
+      }
       printData();
       break;
 
@@ -20,8 +25,13 @@ void loop() {
       break;
 
       case '6':
-      Serial.println("+ 1 al jugador b");
-      jug_B_Win_Point();
+      if (jug_B_punt != 255){
+        Serial.println("+ 1 al jugador b");
+        jug_B_Win_Point();
+      }
+      else {
+        Serial.println("El puntaje no puede ser mayor que 255");
+      }
       printData();
       break;
 
