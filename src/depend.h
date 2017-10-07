@@ -22,3 +22,11 @@ void jug_B_Win_Point();
 void resetAll();
 void resetPunt();
 void printData();
+
+#include "fuctions/DriverData.h"//funciones que modifican la data
+void printData(){
+  Serial.print("punt. de jug. A = ");
+  Serial.println(jug_A_punt);
+  Serial.print("punt. de jug. B = ");
+  Serial.println(jug_B_punt);
+}
