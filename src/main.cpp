@@ -1,6 +1,18 @@
 #include <depend.h>
 
 void setup() {
+  /*configuración de pines bcd*/
+  jug_B.BCD[0] = 0;
+  jug_B.BCD[1] = 0;
+  jug_B.BCD[2] = 0;
+  jug_B.BCD[3] = 0;
+
+  /*configuración de pines bcd*/
+  jug_A.BCD[0] = 0;
+  jug_A.BCD[1] = 0;
+  jug_A.BCD[2] = 0;
+  jug_A.BCD[3] = 0;
+  
   Serial.begin(9600);
 }
 
@@ -22,6 +34,7 @@ void loop() {
 
       case '5':
       Serial.println("set");
+      winSet();
       printData();
       break;
 

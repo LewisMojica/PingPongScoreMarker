@@ -5,7 +5,14 @@
 #include <struct/jugData.h>
 /*Instanciaciones de la estructura player_data*/
 player_data jug_A;
+
+
 player_data jug_B;
+
+
+#include <struct/game.h>
+/*Instanciaciones de la estructura player_data*/
+game game_data;
 
 #include <Timer.h>
 /*Instanciaciones de Timer*/
@@ -22,6 +29,7 @@ void jug_A_winPoint();
 void jug_B_winPoint();
 void jug_A_losePoint();
 void jug_B_losePoint();
+void winSet();
 void resetAll();
 void resetPunt();
 void printData();
