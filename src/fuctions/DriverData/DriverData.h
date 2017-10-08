@@ -1,16 +1,20 @@
 void jug_A_winPoint();
 void jug_A_losePoint();
+void jug_A_winSet();
+
 void jug_B_losePoint();
 void jug_B_losePoint();
+void jug_B_winSet();
+
 void resetAll();
 void resetPunt();
 void winSet();
 
 
-#include<DriverData/jug_A_winPoint.h>
-#include<jug_A_losePoint.h>
-#include<jug_B_winPoint.h>
-#include<jug_B_losePoint.h>
-#include<resetAll.h>
-#include<resetPunt.h>
-#include<winSet>
+#include<fuctions/DriverData/jug_A_winPoint.h>
+#include<fuctions/DriverData/jug_A_losePoint.h>
+#include<fuctions/DriverData/jug_B_winPoint.h>
+#include<fuctions/DriverData/jug_B_losePoint.h>
+#include<fuctions/DriverData/resetAll.h>
+#include<fuctions/DriverData/resetPunt.h>
+#include<fuctions/DriverData/winSet.h>
