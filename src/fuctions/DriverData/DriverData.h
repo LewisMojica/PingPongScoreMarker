@@ -13,8 +13,10 @@ void winSet();
 
 #include<fuctions/DriverData/jug_A_winPoint.h>
 #include<fuctions/DriverData/jug_A_losePoint.h>
+#include<fuctions/DriverData/jug_A_winSet.h>
 #include<fuctions/DriverData/jug_B_winPoint.h>
 #include<fuctions/DriverData/jug_B_losePoint.h>
+#include<fuctions/DriverData/jug_B_winSet.h>
 #include<fuctions/DriverData/resetAll.h>
 #include<fuctions/DriverData/resetPunt.h>
 #include<fuctions/DriverData/winSet.h>
