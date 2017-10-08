@@ -12,8 +12,8 @@ void setup() {
   jug_A.BCD[1] = 0;
   jug_A.BCD[2] = 0;
   jug_A.BCD[3] = 0;
-  
-  Serial.begin(9600);
+
+  Serial.begin(19200);
 }
 
 
