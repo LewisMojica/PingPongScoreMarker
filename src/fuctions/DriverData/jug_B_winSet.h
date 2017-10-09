@@ -6,5 +6,13 @@ void jug_B_winSet(){
     set++;
     jug_B.win_set++;
     resetPunt();
+    byte i;
+    timeWin.initOn();
+    while (i != 5){
+      if (timeWin.read() == 1){
+        Serial.println("Jugador B gana el set");
+        i++;
+      }
+    }
   }
 }
