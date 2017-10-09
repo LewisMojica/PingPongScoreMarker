@@ -8,8 +8,8 @@ void configMinDiff(){
         quit_MinDiff = 1;
       }
       else if ((Serial.peek() >= 48) && (Serial.peek() <= 57)){
-        Serial.print("Mínima diferencia configurada a ");
         game_data.min_diff = Serial.read() - 48;
+        Serial.print("Mínima diferencia configurada a ");
         Serial.println(game_data.min_diff);
       }
       else {
