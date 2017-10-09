@@ -21,7 +21,7 @@ void config() {
       }
     }
   }
-  Serial.println("Ha salido del modo configuración hacia el mojo juego");
+  Serial.println("Ha salido del modo configuración hacia el modo juego");
 }
 /*
 <q> -> para salir de la configuración
