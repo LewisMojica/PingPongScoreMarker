@@ -3,5 +3,4 @@ struct game{
   byte win_set = 3;
   byte min_punt = 11;
   byte KO = 6;
-
 };

@@ -5,6 +5,15 @@ void config() {
       switch (Serial.read()) {
         case 'q':
           quit = 1;
+          break;
+        case 'p':
+          break;
+        case 'd':
+          break;
+        case 's':
+          break;
+        default:
+          Serial.println("estás en el modo configuración, para salir pulsa <q>")
       }
     }
   }
