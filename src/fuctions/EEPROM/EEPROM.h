@@ -2,6 +2,6 @@ void config();
 void configMinDiff();
 void configWinSet();
 
-#include <fuctuins/EEPROM/config.h>
-#include <fuctuins/EEPROM/configMinDiff.h>
-#include <fuctuins/EEPROM/configWinSet.h>
+#include <fuctions/EEPROM/config.h>
+#include <fuctions/EEPROM/configMinDiff.h>
+#include <fuctions/EEPROM/configWinSet.h>

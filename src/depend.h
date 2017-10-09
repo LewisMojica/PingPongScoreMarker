@@ -21,4 +21,4 @@ byte set = 1;  //set actual
 
 #include <fuctions/DriverData/DriverData.h>//funciones que modifican la data
 #include <fuctions/dataSerial.h>//funcion que imprime los datos del juego
-#include <fuctions/EEPROM.h>//funciones de configutacion de datos de juego en la EEPROM
+#include <fuctions/EEPROM/EEPROM.h>//funciones de configutacion de datos de juego en la EEPROM

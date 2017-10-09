@@ -19,7 +19,7 @@ void setup() {
 
 
 void loop() {
-  if (Serial.available () !=0) {
+  if (Serial.available () > 0) {
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
       case '4':                                 //1 = - jug. a 2 = reset 3 = - jug. b
       if (jug_A.punt != 255){
@@ -81,6 +81,10 @@ void loop() {
       printData();
       break;
 
+      case 'c':
+      config();
+      break;
+      
       default:
       Serial.println("caracter inválido -__- presiona la <p> para imprimir los datos :D");
       break;

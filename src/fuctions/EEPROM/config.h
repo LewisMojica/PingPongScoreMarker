@@ -1,11 +1,11 @@
 void config() {
   Serial.println("Estás en el modo configuración, para salir pulsa <q>");
-  bool quit;
-  while(quit == 0){
-    if (Serial.available() != 0){
+  bool quitConfig = 0;
+  while(quitConfig == 0){
+    if (Serial.available() > 0){
       switch (Serial.read()) {
         case 'q':
-          quit = 1;
+          quitConfig = 1;
           break;
         // case 'p':
         //   break;
@@ -21,4 +21,11 @@ void config() {
       }
     }
   }
+  Serial.println("Ha salido del modo configuración hacia el mojo juego");
 }
+/*
+<q> -> para salir de la configuración
+<d> -> para entrar a la configuración de la diferencia mínima
+<s> -> para entrar a la configuración de los set que hay que ganar para ganar el partido
+
+*/
