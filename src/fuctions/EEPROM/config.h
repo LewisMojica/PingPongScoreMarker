@@ -13,7 +13,8 @@ void config() {
         case 's':
           break;
         default:
-          Serial.println("estás en el modo configuración, para salir pulsa <q>")
+          Serial.println("estás en el modo configuración, para salir pulsa <q>");
+          break;
       }
     }
   }
