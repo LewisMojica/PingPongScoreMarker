@@ -8,5 +8,4 @@ void jug_A_winGame(){
       i++;
     }
   }
-  timeWin.end();
 }
