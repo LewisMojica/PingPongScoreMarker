@@ -37,6 +37,11 @@ void Timer::init(){
   reset();
 }
 
+void Timer::initOn(){
+  _init=1;
+  _pre_millis=millis() + _interval;
+}
+
 void Timer::end(){
   _init=0;
 }

@@ -12,6 +12,8 @@ class Timer
   Timer(unsigned long interval);      //constructor
   void init();                          //funcion que habilita el timer para que retorne un 1 y resetea el timer
 
+  void initOn();
+
   bool check ();                        //funcion que retorna el tiempo que falta para que activie el timer, pero sin resetearlo en ninguna circunstancia
 
   bool read ();                         //fucion que retorna el estado del timer, si devuelve un true entonces el timer se resetea*/
