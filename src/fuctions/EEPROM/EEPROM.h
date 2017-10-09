@@ -1,4 +1,7 @@
 void config();
+void configMinDiff();
+void configWinSet();
 
-
-#include<config.h>
+#include <fuctuins/EEPROM/config.h>
+#include <fuctuins/EEPROM/configMinDiff.h>
+#include <fuctuins/EEPROM/configWinSet.h>
