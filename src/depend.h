@@ -5,10 +5,7 @@
 #include <struct/jugData.h>
 /*Instanciaciones de la estructura player_data*/
 player_data jug_A;
-
-
 player_data jug_B;
-
 
 #include <struct/game.h>
 /*Instanciaciones de la estructura player_data*/
@@ -16,7 +13,7 @@ game game_data;
 
 #include <Timer.h>
 /*Instanciaciones de Timer*/
-
+Timer timeWin(750); //para las funciondes de jug_winGame
 
 /*Definiciones*/
 byte set = 1;  //set actual
