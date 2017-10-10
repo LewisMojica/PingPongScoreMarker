@@ -81,10 +81,14 @@ void loop() {
       printData();
       break;
 
+      case 'g':
+      pintDataGame();
+      break;
+
       case 'c':
       config();
       break;
-      
+
       default:
       Serial.println("caracter inválido -__- presiona la <p> para imprimir los datos :D");
       break;
