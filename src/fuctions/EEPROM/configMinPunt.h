@@ -3,7 +3,7 @@ void configMinPunt(){
   bool quit_minPunt = 0;
   while (quit_minPunt == 0) {
     if (Serial.available() > 0){
-      delay(50);
+      delay(1);
       if (Serial.peek() == 'q'){
         Serial.read();
         quit_minPunt = 1;
