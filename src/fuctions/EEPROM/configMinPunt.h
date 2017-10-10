@@ -17,6 +17,8 @@ void configMinPunt(){
           else if(Serial.available() == 1){
             tmp_num = tmp_num + (Serial.read() - 48);
             game_data.min_punt = tmp_num;
+            Serial.print("min_punt configurado a ");
+            Serial.println(game_data.min_punt);
           }
         }
       }
