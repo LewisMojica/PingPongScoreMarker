@@ -21,6 +21,7 @@ void configMinPunt(){
         Serial.print("Caracter/es <");
         while (Serial.available() > 0){
           Serial.write(Serial.read());
+          delayMicroseconds(500);
         }
         Serial.println("> es inválido");
       }
