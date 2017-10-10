@@ -1,5 +1,5 @@
 void configMinPunt(){
-  Serial.println("Está dentro de la configuración de minDiff, pulse <q> para salir hacia el modo configuración");
+  Serial.println("Está dentro de la configuración de minPunt, pulse <q> para salir hacia el modo configuración");
   bool quit_minPunt = 0;
   while (quit_minPunt == 0) {
     if (Serial.available() > 0){
@@ -26,4 +26,5 @@ void configMinPunt(){
       }
     }
   }
+  Serial.println("Ha salido de la configutación de minPunt, pulse <q> para salir del modo configuración");
 }
