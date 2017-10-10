@@ -14,7 +14,10 @@ void configWinSet(){
       }
       else {
         Serial.print("El caracter <");
-        Serial.write(Serial.read());
+        while (Serial.available() > 0){
+          Serial.write(Serial.read());
+          delayMicroseconds(500);
+        }
         Serial.println("> es inválido");
       }
     }
