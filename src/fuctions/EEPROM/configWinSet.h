@@ -11,6 +11,8 @@ void configWinSet(){
         game_data.win_set = Serial.read() - 48;
         Serial.print("Sets para ganar el partido configurado a ");
         Serial.println(game_data.win_set);
+        EEPROM.update(1, game_data.win_set);
+        resetAll();
       }
       else {
         Serial.print("Caracter/es <");

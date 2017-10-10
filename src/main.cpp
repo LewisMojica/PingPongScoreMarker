@@ -1,17 +1,22 @@
 #include <depend.h>
 
 void setup() {
-  /*configuración de pines bcd*/
-  jug_B.BCD[0] = 0;
-  jug_B.BCD[1] = 0;
-  jug_B.BCD[2] = 0;
-  jug_B.BCD[3] = 0;
+  // /*configuración de pines bcd*/
+  // jug_B.BCD[0] = 0;
+  // jug_B.BCD[1] = 0;
+  // jug_B.BCD[2] = 0;
+  // jug_B.BCD[3] = 0;
+  //
+  // /*configuración de pines bcd*/
+  // jug_A.BCD[0] = 0;
+  // jug_A.BCD[1] = 0;
+  // jug_A.BCD[2] = 0;
+  // jug_A.BCD[3] = 0;
 
-  /*configuración de pines bcd*/
-  jug_A.BCD[0] = 0;
-  jug_A.BCD[1] = 0;
-  jug_A.BCD[2] = 0;
-  jug_A.BCD[3] = 0;
+  /*Asignación de game_data a partir de los valores de la EEPROM*/
+  game_data.min_diff = EEPROM.read(0);
+  game_data.win_set  = EEPROM.read(1);
+  game_data.min_punt = EEPROM.read(2);
 
   Serial.begin(19200);
 }

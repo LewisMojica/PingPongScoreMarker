@@ -11,6 +11,8 @@ void configMinDiff(){
         game_data.min_diff = Serial.read() - 48;
         Serial.print("Mínima diferencia configurada a ");
         Serial.println(game_data.min_diff);
+        EEPROM.update(0, game_data.min_diff);
+        resetAll();
       }
       else {
         Serial.print("El caracter <");

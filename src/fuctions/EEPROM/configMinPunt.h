@@ -18,7 +18,9 @@ void configMinPunt(){
             tmp_num = tmp_num + (Serial.read() - 48);
             game_data.min_punt = tmp_num;
             Serial.print("min_punt configurado a ");
-            Serial.println(game_data.min_punt);
+            Serial.println(tmp_num);
+            EEPROM.update(2, tmp_num);
+            resetAll();
           }
         }
       }
