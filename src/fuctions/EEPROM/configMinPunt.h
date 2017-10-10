@@ -6,7 +6,7 @@ void configMinPunt(){
       if (Serial.peek() == 'q'){
         quit_minPunt = 1;
       }
-      else if ((Serial.available() == 2) && (Serial.peek() >= 48 || Serial.peek() <= 57)){
+      else if ((Serial.available() == 2) && (Serial.peek() >= 48 && Serial.peek() <= 57)){
         static byte tmp_num;
         while ((Serial.available() <= 2) && (Serial.available() > 0)) {
           if (Serial.available() == 1){
