@@ -13,8 +13,10 @@ void config() {
           configMinDiff();
           break;
         case 's':
-        configWinSet();
+          configWinSet();
           break;
+        case 'p':
+          configMinPunt();
         default:
           Serial.println("Estás en el modo configuración, para salir pulsa <q>");
           break;
