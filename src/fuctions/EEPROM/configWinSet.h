@@ -13,7 +13,7 @@ void configWinSet(){
         Serial.println(game_data.win_set);
       }
       else {
-        Serial.print("El caracter <");
+        Serial.print("Caracter/es <");
         while (Serial.available() > 0){
           Serial.write(Serial.read());
           delayMicroseconds(500);
