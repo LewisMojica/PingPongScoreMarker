@@ -17,6 +17,7 @@ void setup() {
   game_data.min_diff = EEPROM.read(0);
   game_data.win_set  = EEPROM.read(1);
   game_data.min_punt = EEPROM.read(2);
+  game_data.KO = EEPROM.read(3);
 
   Serial.begin(19200);
 }

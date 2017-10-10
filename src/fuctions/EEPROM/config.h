@@ -7,8 +7,9 @@ void config() {
         case 'q':
           quitConfig = 1;
           break;
-        // case 'p':
-        //   break;
+        case 'k':
+          configKO();
+          break;
         case 'd':
           configMinDiff();
           break;
