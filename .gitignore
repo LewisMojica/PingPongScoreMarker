@@ -7,3 +7,5 @@ src/fuctions/EEPROM/info-EEPROM-celda.txt
 platformio.ini
 .travis.yml
 
+*.swp
+toDo.txt
