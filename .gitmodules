@@ -1,0 +1,3 @@
+[submodule "lib/ArduinoUtils"]
+	path = lib/ArduinoUtils
+	url = git@github.com:LewisMojica/ArduinoUtils.git
