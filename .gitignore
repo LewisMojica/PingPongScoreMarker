@@ -4,7 +4,6 @@
 .gcc-flags.json
 Digram_long_punsh
 src/fuctions/EEPROM/info-EEPROM-celda.txt
-platformio.ini
 .travis.yml
 
 *.swp
