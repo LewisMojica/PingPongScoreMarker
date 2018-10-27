@@ -14,18 +14,22 @@ void winSet();
 
 void jug_A_winPoint(){
     jug_A.punt++;
+    updateDisplayJug_A();
 }
 
 void jug_A_losePoint(){
     jug_A.punt--;
+    updateDisplayJug_A();
 }
 
 void jug_B_winPoint(){
   jug_B.punt++;
+  updateDisplayJug_B();
 }
 
 void jug_B_losePoint(){
   jug_B.punt--;
+  updateDisplayJug_B();
 }
 
 void jug_A_winGame(){
