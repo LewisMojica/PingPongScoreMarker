@@ -40,7 +40,7 @@ void setup() {
 void loop() {
   if (Serial.available () > 0) {
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
-      case '4':                                 //1 = - jug. a 2 = reset 3 = - jug. b
+      case 'w':                                 //1 = - jug. a 2 = reset 3 = - jug. b
       if (jug_A.punt != 255){
         Serial.println("+ 1 al jugador a");
         jug_A_winPoint();
@@ -51,13 +51,13 @@ void loop() {
       printData();
       break;
 
-      case '5':
+      case 'e':
       Serial.println("set");
       winSet();
       printData();
       break;
 
-      case '6':
+      case 'r':
       if (jug_B.punt != 255){
         Serial.println("+ 1 al jugador b");
         jug_B_winPoint();
@@ -68,7 +68,7 @@ void loop() {
       printData();
       break;
 
-      case '1':
+      case 's':
       if (jug_A.punt != 0){
         Serial.println("-1 al jugador a");
         jug_A_losePoint();
@@ -79,13 +79,13 @@ void loop() {
       printData();
       break;
 
-      case '2':
+      case 'd':
       Serial.println("reset");
       resetAll();
       printData();
       break;
 
-      case '3':
+      case 'f':
       if (jug_B.punt != 0){
         Serial.println("-1 al jugador b");
         jug_B_losePoint();
