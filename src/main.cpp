@@ -1,12 +1,27 @@
-#include <Arduino.h>
-#include <EEPROM.h>
 
-#include <Button.h>
-
+#include <CodeBCD.h>
+#include <pinConfig.h>
+CodeBCD display_jug_a[2] = {
+  CodeBCD(bcd_pin_jug_a_pos_0_A,bcd_pin_jug_a_pos_0_B,bcd_pin_jug_a_pos_0_C,bcd_pin_jug_a_pos_0_D),
+  CodeBCD(bcd_pin_jug_a_pos_1_A,bcd_pin_jug_a_pos_1_B,bcd_pin_jug_a_pos_1_C,bcd_pin_jug_a_pos_1_D)
+};
+CodeBCD display_jug_b[2] = {
+  CodeBCD(bcd_pin_jug_b_pos_0_A,bcd_pin_jug_b_pos_0_B,bcd_pin_jug_b_pos_0_C,bcd_pin_jug_b_pos_0_D),
+  CodeBCD(bcd_pin_jug_b_pos_1_A,bcd_pin_jug_b_pos_1_B,bcd_pin_jug_b_pos_1_C,bcd_pin_jug_b_pos_1_D)
+};
 #include <struct/jugData.h>
 /*Instanciaciones de la estructura player_data*/
 player_data jug_A;
 player_data jug_B;
+#include <fuctions/DriverDisplay/DriverDisplay.h>
+#include <Arduino.h>
+#include <EEPROM.h>
+
+
+
+#include <Button.h>
+
+
 
 #include <struct/game.h>
 /*Instanciaciones de la estructura player_data*/
