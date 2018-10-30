@@ -49,7 +49,7 @@ void jug_A_winSet(){
     jug_A_winGame();
   }
   else{
-    set++;
+    game_data.actual_set++;
     jug_A.win_set++;
     resetPunt();
     byte i;
@@ -79,7 +79,7 @@ void jug_B_winSet(){
     jug_B_winGame();
   }
   else{
-    set++;
+    game_data.actual_set++;
     jug_B.win_set++;
     resetPunt();
     byte i;
@@ -114,5 +114,5 @@ void resetAll(){
   jug_A.win_set = 0;
   jug_B.punt = 0;
   jug_B.win_set = 0;
-  set = 1;
+  game_data.actual_set = 1;
 }

@@ -31,9 +31,7 @@ game game_data;
 /*Instanciaciones de Timer*/
 Timer timeWin(750); //para las funciondes de jug_winGame
 
-/*Definiciones*/
-byte set = 1;  //set actual
-///////////////////////////
+
 
 #include <fuctions/DriverData/DriverData.h>//funciones que modifican la data
 #include <fuctions/dataSerial.h>//funcion que imprime los datos del juego
