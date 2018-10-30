@@ -34,7 +34,7 @@ Timer timeWin(750); //para las funciondes de jug_winGame
 
 
 #include <fuctions/DriverData/DriverData.h>//funciones que modifican la data
-#include <fuctions/dataSerial.h>//funcion que imprime los datos del juego
+#include <fuctions/dataSerial/dataSerial.h>//funcion que imprime los datos del juego
 #include <fuctions/EEPROM/EEPROM.h>//funciones de configutacion de datos de juego en la EEPROM
 
 void setup() {

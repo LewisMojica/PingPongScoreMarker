@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <fuctions/dataSerial.h>
+#include <fuctions/dataSerial/dataSerial.h>
 #include <struct/jugData.h>
 #include <struct/game.h>
 
