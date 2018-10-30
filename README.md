@@ -11,7 +11,7 @@
 
 * Salidas BCD están conectadas a los pines **22-38 y 39,41,43,45**
 
- ### ** _Los pines pueden ser cambiados en el archivo `src/pinConfig.h`_ **
+ ### **_Los pines pueden ser cambiados en el archivo [src/pinConfig.h](https://github.com/LewisMojica/PingPongScoreMarker/blob/master/src/pinConfig.h)_**
  
  
  
