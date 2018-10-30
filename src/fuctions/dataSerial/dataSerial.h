@@ -1,0 +1,5 @@
+
+void printData();
+void pintDataGame();
+
+
