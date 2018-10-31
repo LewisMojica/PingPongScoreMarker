@@ -33,12 +33,12 @@ CodeBCD display_set(bcd_set_A,bcd_set_B,bcd_set_C,bcd_set_D);
 
 
 /*INSTANCIACIONES DE LOS BOTONES*/
-Button buton[6] = {Button(button0,antibounce_delay,Button::FLOATING),
-                    Button(button1,antibounce_delay,Button::FLOATING),
-                    Button(button2,antibounce_delay,Button::FLOATING),
-                    Button(button3,antibounce_delay,Button::FLOATING),
-                    Button(button4,antibounce_delay,Button::FLOATING),
-                    Button(button5,antibounce_delay,Button::FLOATING)};
+Button buton[6] = {Button(button0,antibounce_delay,Button::PULLUP),
+                    Button(button1,antibounce_delay,Button::PULLUP),
+                    Button(button2,antibounce_delay,Button::PULLUP),
+                    Button(button3,antibounce_delay,Button::PULLUP),
+                    Button(button4,antibounce_delay,Button::PULLUP),
+                    Button(button5,antibounce_delay,Button::PULLUP)};
 
 /*Instanciaciones de la estructura player_data*/
 jugData jug_A;
@@ -71,6 +71,44 @@ void setup() {
 
 
 void loop() {
+  if(buton[0].falling()){
+    if (jug_A.punt != 255){
+        Serial.println("+ 1 al jugador a");
+        jug_A_winPoint();
+    }
+  }
+  if(buton[1].falling()){
+      Serial.println("set");
+      winSet();
+      printData();
+  }
+  if(buton[2].falling()){
+    if (jug_B.punt != 255){
+        Serial.println("+ 1 al jugador b");
+        jug_B_winPoint();
+    }
+  }
+  if(buton[3].falling()){
+    if (jug_B.punt != 0){
+        Serial.println("- 1 al jugador b");
+        jug_B_losePoint();
+    }
+  }
+  if(buton[4].falling()){
+      Serial.println("reset");
+      resetAll();
+      printData();
+  }
+  if(buton[5].falling()){
+    if (jug_A.punt != 0){
+        Serial.println("- 1 al jugador a");
+        jug_A_losePoint();
+    }
+  }
+
+
+
+
   if (Serial.available () > 0) {
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
       case 'w':                                 //1 = - jug. a 2 = reset 3 = - jug. b
