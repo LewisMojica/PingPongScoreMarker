@@ -11,3 +11,6 @@ void jug_B_winGame();
 void resetAll();
 void resetPunt();
 void winSet();
+
+
+void beep();

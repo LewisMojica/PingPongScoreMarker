@@ -4,6 +4,8 @@
 #include <DriverDisplay.h>
 #include <../../struct/game.h>
 #include <Timer.h>
+#include "../../definitions/pinConfig.h"
+#define buzz_time_point 100
 
 extern struct player_data jug_A;
 extern struct player_data jug_B;
@@ -12,6 +14,7 @@ extern Timer timeWin;
 
 void jug_A_winPoint(){
     jug_A.punt++;
+    beep();
     updateDisplayJug_A();
 }
 
@@ -113,4 +116,12 @@ void resetAll(){
   jug_B.punt = 0;
   jug_B.win_set = 0;
   game_data.actual_set = 1;
+}
+
+
+
+void beep(){
+  digitalWrite(buzzer,HIGH);
+  delay(buzz_time_point);
+  digitalWrite(buzzer,LOW);
 }
