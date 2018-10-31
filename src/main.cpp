@@ -4,9 +4,9 @@
 #include <Button.h>
 #include <Timer.h>
 
-#include <fuctions/DriverDisplay/DriverDisplay.h>
-#include <fuctions/DriverData/DriverData.h>//funciones que modifican la data
-#include <fuctions/dataSerial/dataSerial.h>//funcion que imprime los datos del juego
+#include <DriverDisplay.h>
+#include <DriverData.h>//funciones que modifican la data
+#include <dataSerial.h>//funcion que imprime los datos del juego
 #include <StaticConfig.h>//funciones de configutacion de datos de juego en la EEPROM
 
 
