@@ -1,8 +1,8 @@
 
 enum player:bool{B = false, A = true};
 
-void powerOn();
+void powerOnAnimation();
 
-void winSetAnimation();
+void winSetAnimation(enum player);
 
-void winGameAnimation();
+void winGameAnimation(enum player);

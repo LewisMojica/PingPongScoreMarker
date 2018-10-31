@@ -1,8 +1,8 @@
 #include <Arduino.h>
 #include <Animations.h>
 
-void powerOn(){
-
+void powerOnAnimation(){
+    Serial.println("echo \"insert power animation\" > /dev/null");
 }
 
 void winSetAnimation(enum player){
