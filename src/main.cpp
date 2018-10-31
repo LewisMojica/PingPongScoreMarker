@@ -13,7 +13,7 @@
 #include <struct/jugData.h>
 #include <struct/game.h>
 
-#include <pinConfig.h>
+#include "definitions/pinConfig.h"
 
 CodeBCD display_jug_a[2] = {
   CodeBCD(bcd_pin_jug_a_pos_0_A,bcd_pin_jug_a_pos_0_B,bcd_pin_jug_a_pos_0_C,bcd_pin_jug_a_pos_0_D),

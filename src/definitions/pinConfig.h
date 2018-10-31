@@ -22,7 +22,10 @@
 #define bcd_pin_jug_b_pos_0_D 12
 
 //salidas bcd hacia el display de la posicion 1 del jugador b
-#define bcd_pin_jug_b_pos_1_A 13
-#define bcd_pin_jug_b_pos_1_B 14
-#define bcd_pin_jug_b_pos_1_C 15
-#define bcd_pin_jug_b_pos_1_D 16
+#define bcd_pin_jug_b_pos_1_A 14
+#define bcd_pin_jug_b_pos_1_B 15
+#define bcd_pin_jug_b_pos_1_C 16
+#define bcd_pin_jug_b_pos_1_D 17
+
+
+#define buzzer 13
