@@ -1,13 +1,14 @@
 #include <Arduino.h>
+#include <Animations.h>
 
 void powerOn(){
 
 }
 
-void winSetAnimation(){
+void winSetAnimation(enum player){
 
 }
 
-void winGameAnimation(){
+void winGameAnimation(enum player){
 
 }
