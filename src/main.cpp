@@ -15,14 +15,18 @@
 
 #include "definitions/pinConfig.h"
 
+
+/* SALIDAS BCD PARA LOS DISPLAYS */
 CodeBCD display_jug_a[2] = {
-  CodeBCD(bcd_pin_jug_a_pos_0_A,bcd_pin_jug_a_pos_0_B,bcd_pin_jug_a_pos_0_C,bcd_pin_jug_a_pos_0_D),
-  CodeBCD(bcd_pin_jug_a_pos_1_A,bcd_pin_jug_a_pos_1_B,bcd_pin_jug_a_pos_1_C,bcd_pin_jug_a_pos_1_D)
+  CodeBCD(bcd_jug_a_0A,bcd_jug_a_0B,bcd_jug_a_0C,bcd_jug_a_0D),
+  CodeBCD(bcd_jug_a_1A,bcd_jug_a_1B,bcd_jug_a_1C,bcd_jug_a_1D)
 };
 CodeBCD display_jug_b[2] = {
-  CodeBCD(bcd_pin_jug_b_pos_0_A,bcd_pin_jug_b_pos_0_B,bcd_pin_jug_b_pos_0_C,bcd_pin_jug_b_pos_0_D),
-  CodeBCD(bcd_pin_jug_b_pos_1_A,bcd_pin_jug_b_pos_1_B,bcd_pin_jug_b_pos_1_C,bcd_pin_jug_b_pos_1_D)
+  CodeBCD(bcd_jug_b_0A,bcd_jug_b_0B,bcd_jug_b_0C,bcd_jug_b_0D),
+  CodeBCD(bcd_jug_b_1A,bcd_jug_b_1B,bcd_jug_b_1C,bcd_jug_b_1D)
 };
+
+CodeBCD display_set(bcd_set_A,bcd_set_B,bcd_set_C,bcd_set_D);
 
 /*Instanciaciones de la estructura player_data*/
 player_data jug_A;
@@ -46,6 +50,9 @@ void setup() {
   game_data.KO = EEPROM.read(3);
 
   Serial.begin(19200);
+
+  /* PIN CONFIGURATION */
+  pinMode(buzzer,OUTPUT);
 }
 
 
