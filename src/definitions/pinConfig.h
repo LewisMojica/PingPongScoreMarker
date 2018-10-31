@@ -24,8 +24,8 @@
 //salidas bcd hacia el display de la posicion 1 del jugador b
 #define bcd_jug_b_1A 14
 #define bcd_jug_b_1B 15
-#define bcd_jug_b_1C 16
-#define bcd_jug_b_1D 17
+#define bcd_jug_b_1C 22
+#define bcd_jug_b_1D 23
 
 
 //salidas bcd hacia el display del set
@@ -36,3 +36,12 @@
 
 //salida a la que esta conectado el buzzer
 #define buzzer 13
+
+
+//entradas de los botones
+#define button0 21
+#define button1 20
+#define button2 19
+#define button3 18
+#define button4 17
+#define button5 16

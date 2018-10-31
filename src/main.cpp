@@ -8,12 +8,14 @@
 #include <DriverData.h>//funciones que modifican la data
 #include <dataSerial.h>//funcion que imprime los datos del juego
 #include <StaticConfig.h>//funciones de configutacion de datos de juego en la EEPROM
+#include <Animations.h>
 
 
 #include <struct/jugData.h>
 #include <struct/game.h>
 
 #include "definitions/pinConfig.h"
+#include "definitions/otherDef.h"
 
 
 /* SALIDAS BCD PARA LOS DISPLAYS */
@@ -26,7 +28,17 @@ CodeBCD display_jug_b[2] = {
   CodeBCD(bcd_jug_b_1A,bcd_jug_b_1B,bcd_jug_b_1C,bcd_jug_b_1D)
 };
 
+/* SALIDAS BCD PARA EL DISPLY DEL SET*/
 CodeBCD display_set(bcd_set_A,bcd_set_B,bcd_set_C,bcd_set_D);
+
+
+/*INSTANCIACIONES DE LOS BOTONES*/
+Button buton[6] = {Button(button0,antibounce_delay,Button::FLOATING),
+                    Button(button1,antibounce_delay,Button::FLOATING),
+                    Button(button2,antibounce_delay,Button::FLOATING),
+                    Button(button3,antibounce_delay,Button::FLOATING),
+                    Button(button4,antibounce_delay,Button::FLOATING),
+                    Button(button5,antibounce_delay,Button::FLOATING)};
 
 /*Instanciaciones de la estructura player_data*/
 jugData jug_A;
@@ -53,6 +65,7 @@ void setup() {
 
   /* PIN CONFIGURATION */
   pinMode(buzzer,OUTPUT);
+
 }
 
 
