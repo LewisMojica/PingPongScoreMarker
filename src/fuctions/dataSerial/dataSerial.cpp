@@ -1,7 +1,7 @@
 #include <Arduino.h>
-#include <fuctions/dataSerial/dataSerial.h>
-#include <struct/jugData.h>
-#include <struct/game.h>
+#include "dataSerial.h"
+#include <../../struct/jugData.h>
+#include <../../struct/game.h>
 
 extern struct player_data jug_A;
 extern struct player_data jug_B;

@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include <fuctions/EEPROM/EEPROM.h>
-#include <fuctions/DriverData/DriverData.h>
+#include "StaticConfig.h"
+#include <DriverData.h>
 #include <EEPROM.h>
-#include <struct/game.h>
+#include <../../struct/game.h>
 
 extern struct game game_data;
 

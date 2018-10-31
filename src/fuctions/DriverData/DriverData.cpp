@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#include <fuctions/DriverData/DriverData.h>
-#include <struct/jugData.h>
-#include <fuctions/DriverDisplay/DriverDisplay.h>
-#include <struct/game.h>
+#include <DriverData.h>
+#include "../../struct/jugData.h"
+#include <DriverDisplay.h>
+#include <../../struct/game.h>
 #include <Timer.h>
 
 extern struct player_data jug_A;

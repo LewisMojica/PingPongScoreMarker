@@ -1,7 +1,7 @@
 #include <Arduino.h>
-#include <fuctions/DriverDisplay/DriverDisplay.h>
+#include "DriverDisplay.h"
 #include <CodeBCD.h>
-#include <struct/jugData.h>
+#include "../../struct/jugData.h"
 
 
 extern CodeBCD display_jug_a[];
