@@ -7,8 +7,8 @@
 #include "../../definitions/pinConfig.h"
 #define buzz_time_point 100
 
-extern struct player_data jug_A;
-extern struct player_data jug_B;
+extern struct jugData jug_A;
+extern struct jugData jug_B;
 extern struct game game_data;
 extern Timer timeWin;
 

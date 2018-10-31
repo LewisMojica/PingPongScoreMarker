@@ -29,8 +29,8 @@ CodeBCD display_jug_b[2] = {
 CodeBCD display_set(bcd_set_A,bcd_set_B,bcd_set_C,bcd_set_D);
 
 /*Instanciaciones de la estructura player_data*/
-player_data jug_A;
-player_data jug_B;
+jugData jug_A;
+jugData jug_B;
 
 /*Instanciaciones de la estructura player_data*/
 game game_data;
