@@ -10,7 +10,7 @@
 extern struct jugData jug_A;
 extern struct jugData jug_B;
 extern struct game game_data;
-extern Timer timeWin;
+// extern Timer timeWin;
 
 void jug_A_winPoint(){
     jug_A.punt++;
@@ -34,6 +34,7 @@ void jug_B_losePoint(){
 }
 
 void jug_A_winGame(){
+  Timer timeWin(750);
   resetAll();
   timeWin.initOn();
   byte i = 0;
@@ -46,6 +47,7 @@ void jug_A_winGame(){
 }
 
 void jug_A_winSet(){
+  Timer timeWin(750);
   if (jug_A.win_set == game_data.win_set - 1){
     jug_A_winGame();
   }
@@ -55,7 +57,7 @@ void jug_A_winSet(){
     resetPunt();
     byte i;
     timeWin.initOn();
-    while (i != 5){
+    while(i != 5){
       if (timeWin.read() == 1){
         Serial.println("Jugador A gana el set");
         i++;
@@ -63,19 +65,9 @@ void jug_A_winSet(){
     }
   }
 }
-void jug_B_winGame(){
-  resetAll();
-  timeWin.initOn();
-  byte i = 0;
-  while (i != 5){
-    if (timeWin.read() == 1){
-      Serial.println("Jugador B gana el partido!");
-      i++;
-    }
-  }
-}
 
 void jug_B_winSet(){
+  Timer timeWin(750);
   if (jug_B.win_set == game_data.win_set - 1){
     jug_B_winGame();
   }
@@ -93,6 +85,20 @@ void jug_B_winSet(){
     }
   }
 }
+
+void jug_B_winGame(){
+  Timer timeWin(750);
+  resetAll();
+  timeWin.initOn();
+  byte i = 0;
+  while (i != 5){
+    if (timeWin.read() == 1){
+      Serial.println("Jugador B gana el partido!");
+      i++;
+    }
+  }
+}
+
 
 void winSet(){
   if (((jug_A.punt >= game_data.min_punt || jug_B.punt >= game_data.min_punt)) || (jug_A.punt == game_data.KO && jug_B.punt == 0) || (jug_B.punt == game_data.KO && jug_A.punt == 0) ){

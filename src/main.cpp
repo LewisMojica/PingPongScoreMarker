@@ -2,7 +2,6 @@
 #include <EEPROM.h>
 #include <CodeBCD.h>
 #include <Button.h>
-#include <Timer.h>
 
 #include <DriverDisplay.h>
 #include <DriverData.h>//funciones que modifican la data
@@ -48,7 +47,7 @@ jugData jug_B;
 game game_data;
 
 /*Instanciaciones de Timer*/
-Timer timeWin(750); //para las funciondes de jug_winGame
+ //para las funciondes de jug_winGame
 
 
 
@@ -66,11 +65,54 @@ void setup() {
   /* PIN CONFIGURATION */
   pinMode(buzzer,OUTPUT);
 
+  powerOnAnimation();
 }
 
 
 
 void loop() {
+
+  if(buton[0].falling()){
+    if (jug_A.punt != 255){
+        Serial.println("+ 1 al jugador a");
+        jug_A_winPoint();
+    }
+    printData();
+  }
+  if(buton[1].falling()){
+      Serial.println("set");
+      winSet();
+      printData();
+  }
+  if(buton[2].falling()){
+    if (jug_B.punt != 255){
+        Serial.println("+ 1 al jugador b");
+        jug_B_winPoint();
+    }
+    printData();
+  }
+  if(buton[3].falling()){
+    if (jug_B.punt != 0){
+        Serial.println("- 1 al jugador b");
+        jug_B_losePoint();
+    }
+    printData();
+  }
+  if(buton[4].falling()){
+      Serial.println("reset");
+      resetAll();
+      printData();
+      printData();
+  }
+  if(buton[5].falling()){
+    if (jug_A.punt != 0){
+        Serial.println("- 1 al jugador a");
+        jug_A_losePoint();
+    }
+    printData();
+  }
+
+
   if (Serial.available () > 0) {
     switch (Serial.read()) {                    //4 = + jug. a 5 = set   6 = + jug. b
       case 'w':                                 //1 = - jug. a 2 = reset 3 = - jug. b
