@@ -1,5 +1,5 @@
 
-enum player:bool{B = false, A = true};
+enum player:bool{jugB = false, jugA = true};
 
 void powerOnAnimation();
 

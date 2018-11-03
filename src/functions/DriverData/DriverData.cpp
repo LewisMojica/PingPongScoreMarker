@@ -4,6 +4,7 @@
 #include <DriverDisplay.h>
 #include <../../struct/game.h>
 #include <Timer.h>
+#include <Animations.h>
 #include "../../definitions/pinConfig.h"
 #define buzz_time_point 100
 
@@ -33,21 +34,7 @@ void jug_B_losePoint(){
   updateDisplayJug_B();
 }
 
-void jug_A_winGame(){
-  Timer timeWin(750);
-  resetAll();
-  timeWin.initOn();
-  byte i = 0;
-  while (i != 5){
-    if (timeWin.read() == 1){
-      Serial.println("Jugador A gana el partido!");
-      i++;
-    }
-  }
-}
-
 void jug_A_winSet(){
-  Timer timeWin(750);
   if (jug_A.win_set == game_data.win_set - 1){
     jug_A_winGame();
   }
@@ -55,20 +42,12 @@ void jug_A_winSet(){
     game_data.actual_set++;
     jug_A.win_set++;
     resetPunt();
-    byte i;
-    timeWin.initOn();
-    while(i != 5){
-      if (timeWin.read() == 1){
-        Serial.println("Jugador A gana el set");
-        i++;
-      }
-    }
+    winSetAnimation(jugA);
   }
   updateDisplayJug_A();
 }
 
 void jug_B_winSet(){
-  Timer timeWin(750);
   if (jug_B.win_set == game_data.win_set - 1){
     jug_B_winGame();
   }
@@ -76,29 +55,19 @@ void jug_B_winSet(){
     game_data.actual_set++;
     jug_B.win_set++;
     resetPunt();
-    byte i;
-    timeWin.initOn();
-    while (i != 5){
-      if (timeWin.read() == 1){
-        Serial.println("Jugador B gana el set");
-        i++;
-      }
-    }
+    winSetAnimation(jugB);
   }
   updateDisplayJug_B();
 }
 
-void jug_B_winGame(){
-  Timer timeWin(750);
+void jug_A_winGame(){
   resetAll();
-  timeWin.initOn();
-  byte i = 0;
-  while (i != 5){
-    if (timeWin.read() == 1){
-      Serial.println("Jugador B gana el partido!");
-      i++;
-    }
-  }
+  winGameAnimation(jugA);
+}
+
+void jug_B_winGame(){
+  resetAll();
+  winGameAnimation(jugB);
 }
 
 
