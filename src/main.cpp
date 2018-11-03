@@ -65,6 +65,11 @@ void setup() {
   /* PIN CONFIGURATION */
   pinMode(buzzer,OUTPUT);
 
+  pinMode(set_indicator_jug_a_0,OUTPUT);
+  pinMode(set_indicator_jug_a_1,OUTPUT);
+  pinMode(set_indicator_jug_b_0,OUTPUT);
+  pinMode(set_indicator_jug_b_1,OUTPUT);
+
   powerOnAnimation();
 }
 
@@ -102,7 +107,6 @@ void loop() {
   if(buton[4].falling()){
       Serial.println("reset");
       resetAll();
-      printData();
       printData();
   }
   if(buton[5].falling()){

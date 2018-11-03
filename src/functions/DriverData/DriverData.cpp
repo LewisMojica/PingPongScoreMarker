@@ -64,6 +64,7 @@ void jug_A_winSet(){
       }
     }
   }
+  updateDisplayJug_A();
 }
 
 void jug_B_winSet(){
@@ -84,6 +85,7 @@ void jug_B_winSet(){
       }
     }
   }
+  updateDisplayJug_B();
 }
 
 void jug_B_winGame(){
@@ -122,6 +124,7 @@ void resetAll(){
   jug_B.punt = 0;
   jug_B.win_set = 0;
   game_data.actual_set = 1;
+  updateAllDisplay();
 }
 
 

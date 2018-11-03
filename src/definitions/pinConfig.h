@@ -13,6 +13,9 @@
 #define bcd_jug_a_1C 7
 #define bcd_jug_a_1D 8
 
+//indicadores de sets ganados
+#define set_indicator_jug_a_0 52
+#define set_indicator_jug_a_1 51
 
                     /* JUGADOR B*/
 //salidas bcd hacia el display de la posicion 0 del jugador b
@@ -24,9 +27,12 @@
 //salidas bcd hacia el display de la posicion 1 del jugador b
 #define bcd_jug_b_1A 14
 #define bcd_jug_b_1B 15
-#define bcd_jug_b_1C 22
 #define bcd_jug_b_1D 23
+#define bcd_jug_b_1C 22
 
+//indicadores de sets ganados
+#define set_indicator_jug_b_0 13
+#define set_indicator_jug_b_1 53
 
 //salidas bcd hacia el display del set
 #define bcd_set_A 42
@@ -34,8 +40,9 @@
 #define bcd_set_C 44
 #define bcd_set_D 45
 
+
 //salida a la que esta conectado el buzzer
-#define buzzer 13
+#define buzzer 50
 
 
 //entradas de los botones
