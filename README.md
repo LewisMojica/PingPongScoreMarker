@@ -3,6 +3,7 @@
 
 
 
+
 * Los botones están conectados a los pines **21-14**
 
 * El buzzer está conectado al pin **13**
